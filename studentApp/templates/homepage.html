@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Race Management System</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container text-center" style="padding-top: 20vh;">
+        <h1>Welcome to the Race Management System</h1>
+        <div class="row justify-content-center mt-5">
+            <div class="col-md-4">
+                <a href="{% url 'add_student' %}" class="btn btn-primary btn-lg" role="button">Add Student</a>
+            </div>
+            <div class="col-md-4">
+                <a href="{% url 'search_student' %}" class="btn btn-secondary btn-lg" role="button">Search Student</a>
+            </div>
+            
+        </div>
+    </div>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
