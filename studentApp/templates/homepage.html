@@ -3,22 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Record keeping System</title>
+    <title>Homepage</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <div class="container text-center" style="padding-top: 20vh;">
-        <h1>Welcome to the Student Record Keeping System</h1>
-        <div class="row justify-content-center mt-5">
-            <div class="col-md-4">
-                <a href="{% url 'add_student' %}" class="btn btn-primary btn-lg" role="button">Add Student</a>
-            </div>
-            <div class="col-md-4">
-                <a href="{% url 'search_student' %}" class="btn btn-secondary btn-lg" role="button">Search Student</a>
-            </div>
-            
+    <div class="container mt-5">
+        <h1>Welcome to Our School Database System</h1>
+        <div class="list-group mt-4">
+            <a href="{% url 'add_staff_member' %}" class="list-group-item list-group-item-action">Add Staff Member</a>
+            <a href="{% url 'add_student' %}" class="list-group-item list-group-item-action">Add Student</a>
+            <a href="{% url 'add_course' %}" class="list-group-item list-group-item-action">Add Course</a>
+            <a href="{% url 'add_project' %}" class="list-group-item list-group-item-action">Add Project</a>
+            <a href="{% url 'add_exam' %}" class="list-group-item list-group-item-action">Add Exam</a>
+            <a href="{% url 'add_enrollment' %}" class="list-group-item list-group-item-action">Add Enrollment</a>
+            <a href="{% url 'add_teaching' %}" class="list-group-item list-group-item-action">Add Teaching Assignment</a>
+            <a href="{% url 'search_results' %}" class="list-group-item list-group-item-action">Search Records</a>
         </div>
     </div>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Bootstrap JS with Popper.js -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

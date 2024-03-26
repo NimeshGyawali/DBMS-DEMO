@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Project</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="mb-4">Add Project</h2>
+        <form method="post" action="{% url 'add_project' %}">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="project_no">Project Number:</label>
+                <input type="text" class="form-control" id="project_no" name="project_no" placeholder="Enter unique project number" required>
+            </div>
+            <div class="form-group">
+                <label for="project_name">Project Name:</label>
+                <input type="text" class="form-control" id="project_name" name="project_name" placeholder="Enter project name" required>
+            </div>
+            <div class="form-group">
+                <label for="level">Project Level:</label>
+                <input type="text" class="form-control" id="level" name="level" placeholder="Enter project level (e.g., Undergraduate, Graduate)">
+            </div>
+            <div class="form-group">
+                <label for="keywords">Keywords:</label>
+                <input type="text" class="form-control" id="keywords" name="keywords" placeholder="Enter keywords separated by commas">
+            </div>
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <textarea class="form-control" id="description" name="description" rows="3" placeholder="Enter project description"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Project</button>
+        </form>
+    </div>
+    <!-- Bootstrap JS with Popper.js -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

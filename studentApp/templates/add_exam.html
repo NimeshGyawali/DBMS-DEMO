@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Exam</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="mb-4">Add Exam</h2>
+        <form method="post" action="{% url 'add_exam' %}">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="exam_no">Exam Number:</label>
+                <input type="text" class="form-control" id="exam_no" name="exam_no" placeholder="Enter exam number" required>
+            </div>
+            <div class="form-group">
+                <label for="time">Time:</label>
+                <input type="time" class="form-control" id="time" name="time" required>
+            </div>
+            <div class="form-group">
+                <label for="day">Date:</label>
+                <input type="date" class="form-control" id="day" name="day" required>
+            </div>
+            <div class="form-group">
+                <label for="room_no">Room Number:</label>
+                <input type="text" class="form-control" id="room_no" name="room_no" placeholder="Enter room number" required>
+            </div>
+            <div class="form-group">
+                <label for="student_user_no">Student User Number:</label>
+                <input type="text" class="form-control" id="student_user_no" name="student_user_no" placeholder="Enter student's user number" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Exam</button>
+        </form>
+    </div>
+    <!-- Bootstrap JS with Popper.js -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

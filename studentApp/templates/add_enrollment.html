@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Enrollment</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="mb-4">Add Enrollment</h2>
+        <form method="post" action="{% url 'add_enrollment' %}">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="student_user_no">Student User Number:</label>
+                <input type="text" class="form-control" id="student_user_no" name="student_user_no" placeholder="Enter student's user number" required>
+            </div>
+            <div class="form-group">
+                <label for="course_id">Course ID:</label>
+                <input type="text" class="form-control" id="course_id" name="course_id" placeholder="Enter course ID" required>
+            </div>
+            <div class="form-group">
+                <label for="grade">Grade:</label>
+                <select class="form-control" id="grade" name="grade">
+                    <option value="">Select Grade</option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                    <option value="F">F</option>
+                    <option value="P">P (Pass)</option>
+                    <option value="NP">NP (Not Pass)</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Enrollment</button>
+        </form>
+    </div>
+    <!-- Bootstrap JS with Popper.js -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
